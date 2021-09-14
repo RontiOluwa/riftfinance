@@ -1,9 +1,16 @@
 import React from 'react';
 
-function Balance() {
+export interface CardProps {
+  USDCBalance: number | undefined;
+}
+
+function Balance({USDCBalance}: CardProps) {
   return (
-    <div>
-    </div>
+    <li className="topList">
+      <span>
+        USDC Balance: {USDCBalance} USDC
+      </span>
+    </li>
   );
 }
 
